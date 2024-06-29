@@ -1,13 +1,13 @@
-<!doctype html>
-<html lang="en"> 
- <head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title></title> 
-  <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Cards</title>
+    <style>
         body {
-            background-color:  #f0f8ff; 
-            color: black; 
+            background-color: #f0f8ff;
+            color: black;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -17,25 +17,26 @@
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
-            background-color:   #f0f8ff;
+            background-color: #f0f8ff;
             padding: 20px;
             border-radius: 8px;
         }
         .box {
             width: 300px;
-            border: 2px solid black; 
+            border: 2px solid black;
             padding: 20px;
             margin: 10px 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: white; 
+            background-color: white;
             border-radius: 8px;
+            position: relative; /* Menambahkan posisi relatif untuk .box */
         }
         .photo {
             width: 70px;
             height: 70px;
-            border: 1px solid white; 
+            border: 1px solid white;
             object-fit: cover;
         }
         .content {
@@ -45,53 +46,71 @@
         .line {
             width: 2px;
             height: 20px;
-            background-color: #fff; 
+            background-color: #fff;
             margin: 0 auto;
         }
         a {
-            color: #007bff; 
+            color: #007bff;
             text-decoration: none;
         }
         a:hover {
-            text-decoration: underline; 
+            text-decoration: underline;
         }
-    </style> 
- </head> 
- <body> 
-  <div class="container"> 
-   <div class="box"> 
-    <div class="content"> 
-     <p>Nama Orang Tua </p> <a href="#" target="_blank">Lokasi Rumah</a> 
-    </div> 
-   </div> 
-   <div class="box"> 
-    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Foto" class="photo"> 
-    <div class="content"> 
-     <p>Anak Pertama</p> 
-     <p>Birthday:</p> 
-    </div> 
-   </div> 
-   <div class="box"> 
-    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Foto" class="photo"> 
-    <div class="content"> 
-     <p>Anak Kedua</p> 
-     <p>Birthday: </p> 
-    </div> 
-   </div> 
-   <div class="box"> 
-    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Foto" class="photo"> 
-    <div class="content"> 
-     <p>Anak Ketiga</p> 
-     <p>Birthday: </p> 
-    </div> 
-   </div> 
-   <div class="box"> 
-    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Foto" class="photo"> 
-    <div class="content"> 
-     <p>Anak Keempat</p> 
-     <p>Birthday: </p> 
-    </div> 
-   </div> 
-  </div> 
- </body>
+        .settings-button {
+            background: none;
+            border: none;
+            color: black;
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .settings-button:hover {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <p>Anak Anak Dari Orang tua Jujun Junaedi & Siti Alawiyah</p>
+                <a href="#" target="_blank">Lokasi Rumah</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Foto" class="photo">
+            <div class="content">
+                <p>Ivanka Nabila Fikriyah</p>
+                <p>29/10/1999</p>
+                <button class="settings-button" onclick="window.location.href='Popup/Ivanka.html'">•••</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Foto" class="photo">
+            <div class="content">
+                <p>Muhammad Daffa Ikmaludin</p>
+                <p>21/12/2003</p>
+                <button class="settings-button" onclick="window.location.href='Popup/Daffa.html'">•••</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Foto" class="photo">
+            <div class="content">
+                <p>Muhammad Dzarel Alghifari</p>
+                <p>16/09/2008</p>
+                <button class="settings-button" onclick="window.location.href='Popup/Dzarel.html'">•••</button>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Foto" class="photo">
+            <div class="content">
+                <p>Ashilah Khuzaimah Hilaliyah</p>
+                <p>10/06/2013</p>
+                <button class="settings-button" onclick="window.location.href='Popup/Ashilah.html'">•••</button>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
