@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Centered</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #C8DDD1;
+        }
+
+        .card {
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0.5rem;
+            background: #606c88;
+            background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+            background: linear-gradient(to right top, #3f4c6b, #606c88);
+            padding: 1rem;
+            color: rgb(255, 255, 255);
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .icon {
+            height: 3rem;
+            width: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #153586;
+        }
+
+        .icon svg {
+            height: 1.5rem;
+            width: 1.5rem;
+            fill: white;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .title {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .desc {
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: rgb(202, 200, 200);
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .keluarga, .info {
+            flex: 1;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .keluarga {
+            background-color: #284385;
+        }
+
+        .keluarga:hover {
+            background-color: #153586;
+        }
+
+        .info {
+            background-color: #606c88;
+        }
+
+        .info:hover {
+            background-color: #3f4c6b;
+        }
+
+        .close {
+            position: absolute;
+            top: 0.75rem; /* Adjusted for better spacing */
+            right: 0.75rem; /* Adjusted for better spacing */
+            padding: 0.3rem 0.5rem; /* Adjusted padding for internal spacing */
+            border-radius: 50%;
+            background-color: #606c88;
+            color: rgba(255, 255, 255, 1);
+            border: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .close:hover {
+            background-color: rgb(58, 69, 83);
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="icon">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+</svg>
+    </div>
+    <div class="content">
+        <span class="title">Jenal Sudah Menikah!</span>
+        <div class="desc">Pilih untuk mengetahui lebih lanjut tentang Jenal...</div>
+        <div class="actions">
+            <a href="keluarga/KeluargaJenal.html" class="keluarga">Keluarga</a>
+            <a href="info/Jenal.html" class="info">Info</a>
+        </div>
+    </div>
+    <button type="button" class="close">X</button>
+</div>
+</body>
+</html>
