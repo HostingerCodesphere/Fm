@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e0f7fa;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #00796b;
+        }
+        .info {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f1f8e9;
+            border-radius: 5px;
+        }
+        .info label {
+            display: block;
+            font-weight: bold;
+            color: #388e3c;
+        }
+        .info span {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .status-married {
+            background-color: #dcedc8;
+        }
+        .status-single {
+            background-color: #ffebee;
+        }
+        .status-details {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .education {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f1f8e9;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .education ul {
+            display: none;
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .education ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function toggleEducation() {
+            var list = document.getElementById('education-list');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+            } else {
+                list.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Profil Picture" style="display: block; margin: auto; width: 200px; height: 200px; border-radius: 50%; margin-top: 10px; margin-bottom: 20px;">
+    <div class="container">
+        <h1>Info Details</h1>
+        <div class="info">
+            <label for="name">Nama:</label>
+            <span id="name">Muhammad Daffa Ikmaludin</span>
+        </div>
+        <div class="info">
+            <label for="birth">TTL:</label>
+            <span id="birth">Jakarta, 21 Desember 2003</span>
+        </div>
+        <div class="info status-single">
+            <label for="status">Status:</label>
+            <span id="status">Mahasiswa</span>
+        </div>
+        <div class="info">
+            <label for="hobbies">Hobi:</label>
+            <span id="hobbies">Futsal</span>
+        </div>
+        <div class="education" onclick="toggleEducation()">
+            <label for="education-career">Pendidikan:</label>
+            <span id="education-career"></span>
+            <ul id="education-list">
+                <li>&bull; SDN PAHLAWAN SETIA 01</li>
+                <li>&bull; SMPN 2 TARUMAJAYA</li>
+                <li>&bull; SMAN 1 TARUMAJAYA</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
