@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: max-height 0.4s ease;
+            overflow: hidden;
+            max-height: 0;
+        }
+
+        .menu p {
+            margin: 10px 0;
+        }
+
+        .menu:not(.hidden) {
+            max-height: 50px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            width: 120px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            position: relative; /* Tambahkan posisi relatif untuk card */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            overflow: hidden;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-pic::after {
+            content: "RIP"; /* Teks tambahan untuk menandakan status */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: red; /* Warna teks RIP */
+            font-weight: bold;
+        }
+
+        .card.suami {
+            border: 2px solid red; /* Pinggiran merah untuk card "Suami" */
+        }
+
+        .card.suami .name {
+            margin: 5px 0;
+            font-size: 16px;
+            color: red; /* Warna teks nama "Suami" diubah menjadi merah */
+        }
+
+        .card.suami .birthdate {
+            margin: 5px 0;
+            font-size: 14px;
+            color: red; /* Warna teks tanggal "Suami" diubah menjadi merah */
+        }
+
+        .card.istri {
+            border: 2px solid #000; /* Pinggiran hitam untuk card "Istri" */
+        }
+
+        .card.istri .name {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #333; /* Warna teks nama "Istri" tetap hitam */
+        }
+
+        .card.istri .birthdate {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555; 
+        }
+
+        .next-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .next-button:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card suami" onclick="gotoSuamiPage()">
+            <div class="circle">
+                <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="" class="profile-pic">
+            </div>
+            <p class="name">Ujang Rosita</p> 
+            <p class="birthdate">00/00/0000</p> 
+        </div>
+        <div class="card istri" onclick="gotoIstriPage()">
+            <div class="circle">
+                <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="" class="profile-pic">
+            </div>
+            <p class="name">Siti Maysaroh</p>
+            <p class="birthdate">00/00/0000</p>
+        </div>
+    </div>
+    <button class="next-button" onclick="nextPage()">Next</button>
+
+    <script>
+        function nextPage() {
+            window.location.href = "Home.html";
+        }
+
+        function gotoSuamiPage() {
+            window.location.href = "info/AlmUjang.html";
+        }
+
+        function gotoIstriPage() {
+            window.location.href = "info/Siti-m.html";
+        }
+    </script>
+</body>
+</html>

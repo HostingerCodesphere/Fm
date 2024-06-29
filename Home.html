@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .outer-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            position: relative;
+        }
+        .outer-card::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 2px;
+            height: 40px; /* Increased height for longer line */
+            background: #000;
+        }
+        .outer-card:last-child::after {
+            display: none;
+        }
+        .inner-card {
+            display: flex;
+            justify-content: space-between;
+        }
+        .person-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 5px;
+            padding: 10px;
+            width: 130px;
+            word-wrap: break-word;
+        }
+        .person-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .button-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+.outer-card:not(:nth-child(2)) .person-card:nth-child(2) {
+    border: 1px solid black;
+}
+
+.outer-card:not(:nth-child(2)) .person-card:nth-child(2) h3,
+.outer-card:not(:nth-child(2)) .person-card:nth-child(2) p {
+    color: black;
+}
+
+.outer-card:nth-child(2) .person-card:nth-child(2) {
+    border: 1px solid red;
+}
+
+.outer-card:nth-child(2) .person-card:nth-child(2) h3,
+.outer-card:nth-child(2) .person-card:nth-child(2) p {
+    color: red;
+}
+.outer-card .person-card:nth-child(1) {
+    border: 1px solid black;
+}
+
+.outer-card .person-card:nth-child(1) h3,
+.outer-card .person-card:nth-child(1) p {
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="outer-card">
+            <div class="inner-card">
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Suami">
+                    <h3>Jejen</h3>
+                    <p>01/01/1990</p>
+                </div>
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Istri">
+                    <h3>Istri </h3>
+                    <p>01/01/1992</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button>Lihat</button>
+            </div>
+        </div>
+        <div class="outer-card">
+            <div class="inner-card">
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Suami">
+                    <h3>Jujun Junaedi</h3>
+                    <p>01/11/1978</p>
+                </div>
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Istri">
+                    <h3>Siti Alawiyah</h3>
+                    <p style="color: red;">02/02/1992</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button>Lihat</button>
+            </div>
+        </div>
+        <div class="outer-card">
+            <div class="inner-card">
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Suami">
+                    <h3>Suami</h3>
+                    <p>03/03/1990</p>
+                </div>
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Istri">
+                    <h3>Popy</h3>
+                    <p>03/03/1992</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button>Lihat</button>
+            </div>
+        </div>
+        <div class="outer-card">
+            <div class="inner-card">
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Suami">
+                    <h3>Jajat</h3>
+                    <p>04/04/1990</p>
+                </div>
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Istri">
+                    <h3>Istri</h3>
+                    <p>04/04/1992</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button>Lihat</button>
+            </div>
+        </div>
+        <div class="outer-card">
+            <div class="inner-card">
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Suami">
+                    <h3>Jeanal</h3>
+                    <p>05/05/1990</p>
+                </div>
+                <div class="person-card">
+                    <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Istri">
+                    <h3>Istri</h3>
+                    <p>05/05/1992</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button>Lihat</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
