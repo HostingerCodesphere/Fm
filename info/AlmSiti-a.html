@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #C8DDD1; 
+            color: #444;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+        }
+        h1 {
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .info {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f1f8e9;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .info label {
+            font-weight: bold;
+            color: #666;
+        }
+        .info span {
+            display: block;
+            margin-top: 5px;
+            color: #333;
+        }
+        .deceased {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .deceased label {
+            color: #d9534f;
+        }
+        .deceased span {
+            color: #d9534f;
+        }
+        .deceased #name {
+            color: #d9534f; 
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            border-bottom: 1px dotted #007bff;
+        }
+        a:hover {
+            border-bottom-style: solid; 
+        }
+    </style>
+</head>
+<body>
+<img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Codesphere.jpg" alt="Profil Picture" style="display: block; margin: auto; width: 200px; height: 200px; border-radius: 50%; margin-top: 10px; margin-bottom: 20px;">
+    <div class="container">
+        <h1>Info Details</h1>
+        <div class="info deceased">
+            <label for="name">Nama:</label>
+            <span id="name">Siti Alawiyah</span>
+        </div>
+        <div class="info">
+            <label for="birth">TTL:</label>
+            <span id="birth">Cirebon, 19 Desember 1970</span>
+        </div>
+        <div class="info deceased">
+            <label for="death">Tanggal Meninggal:</label>
+            <span id="death"> 7 Juni 2015</span>
+        </div>
+        <div class="info">
+            <label for="burial">Lokasi Kubur:</label>
+            <span id="burial"><a href="#" target="_blank">-</a></span>
+        </div>
+        <div class="info deceased">
+            <label for="status">Status:</label>
+            <span id="status">Cerai Mati</span>
+        </div>
+        <div class="info">
+            <label for="spouse">Nama Pasangan:</label>
+            <span id="spouse">Jujun Junaedi</span>
+        </div>
+        <div class="info">
+            <label for="children">Jumlah Anak:</label>
+            <span id="children">4</span>
+        </div>
+        <div class="info deceased">
+            <label for="education-career">Pekerjaan:</label>
+            <span id="education-career">Ibu Rumah Tangga</span>
+        </div>
+    </div>
+</body>
+</html>
